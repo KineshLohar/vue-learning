@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vuejs Practice</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <span>{{emoji}}</span>
+        <h1>{{heading}}</h1>
+        <p>{{description}}</p>
+        <a href="https://www.google.com">Go Back</a>
+    </div>
+    <script>
+        const { createApp, ref } = Vue
+        createApp({
+            setup() {
+                const emoji = ref('😶');
+                const heading = ref("Updated Heading");
+                const description = ref("updated decscriptasd")
+                const link = ref("google.com")
+                return { emoji, heading, description, link }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>
