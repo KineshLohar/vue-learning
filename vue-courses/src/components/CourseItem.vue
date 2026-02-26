@@ -1,7 +1,27 @@
+<script setup lang="ts">
+
+import CardSections from './CardSections.vue';
+import RoundedButton from './RoundedButton.vue';
+
+defineProps({
+    title: String, 
+    price: Number,
+    description: String
+})
+
+defineEmits(['click'])
+
+</script>
+
 <template>
-    <div class="bg-white rounded border border-gray-200">
-        <h3 class="border-b border-gray-200 p-4 font-medium ">Title</h3>
-        <p class="border-b border-gray-200 p-4 font-medium ">Price</p>
-        <p class="p-4">Descriptio</p>
-    </div>
+    <CardSections>
+        <template #header>{{ title }}</template>
+        {{ price }}
+        <template #footer>
+            <p>{{ description }}</p>
+            <div class="flex justify-end">
+                <RoundedButton @click="$emit('click')">Purchase</RoundedButton>
+            </div>
+        </template>
+    </CardSections>
 </template>
