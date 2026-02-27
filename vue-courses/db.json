@@ -1,0 +1,34 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "Vue Courses",
+      "price": 9.99,
+      "description": "0 to hero",
+      "bought": false
+    },
+    {
+      "id": "2",
+      "title": "Go Courses",
+      "price": 9.99,
+      "description": "0 to hero",
+      "bought": false
+    },
+    {
+      "id": "3",
+      "title": "Dart Courses",
+      "price": 9.99,
+      "description": "0 to hero",
+      "bought": false
+    }
+  ],
+  "bookings": [
+    {
+      "id": "3",
+      "title": "Dart Courses",
+      "price": 9.99,
+      "description": "0 to hero",
+      "status": "confirmed"
+    }
+  ]
+}

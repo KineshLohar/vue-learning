@@ -1,8 +1,18 @@
 
 <script setup lang="ts">
 
+
+const variants = {
+    default: 'border border-gray-200',
+    danger: ' bg-red-200'
+}
+
+
 defineProps({
-variant: String
+variant: {
+    type: String,
+    default: 'default'
+}
 })
 
 defineEmits(['click'])
@@ -11,7 +21,7 @@ defineEmits(['click'])
 <template>
     <button
         @click="$emit('click')"
-        class="border border-gray-200 rounded-full px-3 py-1"
+        :class="['rounded-full px-3 py-1', variants[variant] ?? variants.default]"
     >
        <slot></slot>
     </button>
